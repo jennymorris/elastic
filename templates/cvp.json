@@ -1,0 +1,247 @@
+POST _template/cvp
+{
+ "index_patterns" : "cvp*",
+ "order": 1,
+ "settings": {
+   "number_of_shards": 1,
+   "number_of_replicas" : 0
+ },"mappings": {
+      "doc": {
+        "properties": {
+          "@metdata": {
+            "properties": {
+              "ip_address": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              }
+            }
+          },
+          "@timestamp": {
+            "type": "date"
+          },
+          "@version": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "average_cost": {
+            "type": "float"
+          },
+          "blue": {
+            "type": "keyword"
+          },
+          "case_qty": {
+            "type": "float"
+          },
+          "core_cost": {
+            "type": "float"
+          },
+          "core_price": {
+            "type": "float"
+          },
+          "core_returns_tax_status_primary_ref_option_cd": {
+            "type": "keyword"
+          },
+          "core_returns_tax_status_secondary_ref_option_cd": {
+            "type": "keyword"
+          },
+          "core_sales_tax_status_primary_ref_option_cd": {
+            "type": "keyword"
+          },
+          "core_sales_tax_status_secondary_ref_option_cd": {
+            "type": "keyword"
+          },
+          "cost": {
+            "type": "float"
+          },
+          "country_of_origin": {
+            "type": "text",
+            "fielddata": true
+          },
+          "current_year_ref_class_cd": {
+            "type": "keyword"
+          },
+          "department_id": {
+            "type": "long"
+          },
+          "description": {
+            "type": "text"
+          },
+          "df_sequence": {
+            "type": "keyword"
+          },
+          "discount_for_large_invoices": {
+            "type": "keyword"
+          },
+          "dvd_cost": {
+            "type": "float"
+          },
+          "economic_order_qty": {
+            "type": "long"
+          },
+          "economic_order_qty_discount_percent": {
+            "type": "float"
+          },
+          "expanded_part_number": {
+            "type": "long"
+          },
+          "extract_date": {
+            "type": "date"
+          },
+          "factory_std_pkg": {
+            "type": "keyword"
+          },
+          "green": {
+            "type": "keyword"
+          },
+          "group_code": {
+            "type": "keyword"
+          },
+          "hazardous_materials_id": {
+            "type": "keyword"
+          },
+          "host": {
+            "type": "keyword"
+          },
+          "id": {
+            "type": "keyword"
+          },
+          "invoice_qty_min_for_discount": {
+            "type": "integer"
+          },
+          "jobber_core_cost": {
+            "type": "float"
+          },
+          "jobber_non_stocked_cost": {
+            "type": "float"
+          },
+          "jobber_stocked_cost": {
+            "type": "float"
+          },
+          "last_bin_label_print_date": {
+            "type": "date"
+          },
+          "last_bin_label_print_price": {
+            "type": "float"
+          },
+          "last_modified_date": {
+            "type": "date"
+          },
+          "last_price_change_date": {
+            "type": "date"
+          },
+          "last_updated_dvd_rev_num": {
+            "type": "keyword"
+          },
+          "last_year_ref_class_cd": {
+            "type": "keyword"
+          },
+          "last_yr_core_cost": {
+            "type": "float"
+          },
+          "last_yr_cost": {
+            "type": "float"
+          },
+          "line_abbrev": {
+            "type": "keyword"
+          },
+          "list": {
+            "type": "keyword"
+          },
+          "loc": {
+            "type": "long"
+          },
+          "lock_cost_core_cost": {
+            "type": "float"
+          },
+          "lock_resale_prices": {
+            "type": "float"
+          },
+          "master_installer": {
+            "type": "keyword"
+          },
+          "modified_by_employee_id": {
+            "type": "long"
+          },
+          "part_number": {
+            "type": "long"
+          },
+          "per_car_qty": {
+            "type": "long"
+          },
+          "pink": {
+            "type": "keyword"
+          },
+          "port": {
+            "type": "long"
+          },
+          "post_date": {
+            "type": "date"
+          },
+          "red": {
+            "type": "keyword"
+          },
+          "ref_seasonal_flag_cd": {
+            "type": "keyword"
+          },
+          "ref_unit_designator_cd": {
+            "type": "keyword"
+          },
+          "reportable": {
+            "type": "keyword"
+          },
+          "sort_number": {
+          "type": "keyword"
+          },
+          "special_product_id_code": {
+            "type": "keyword"
+          },
+          "standard_pkg": {
+            "type": "keyword"
+          },
+          "store_group_id": {
+            "type": "long"
+          },
+          "store_retail_price1": {
+            "type": "float"
+          },
+          "store_retail_price2": {
+            "type": "float"
+          },
+          "store_retail_price3": {
+            "type": "float"
+          },
+          "sub_department_id": {
+            "type": "long"
+          },
+          "supplier_id": {
+            "type": "long"
+          },
+          "tax_status_primary_ref_option_cd": {
+            "type": "keyword"
+          },
+          "tax_status_secondary_ref_option_cd": {
+            "type": "keyword"
+          },
+          "type": {
+            "type": "keyword"
+          },
+          "weight_in_kilos": {
+            "type": "long"
+          },
+          "yellow": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+}
